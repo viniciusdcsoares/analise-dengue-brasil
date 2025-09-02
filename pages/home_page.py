@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 @st.cache_data
 def carregar_dados_ufs():
     try:
-        return pd.read_parquet('dados/dados_dengue_ufs.parquet')
+        return pd.read_parquet('data/dados_dengue_ufs.parquet')
     except Exception as e:
         st.error(f"Erro ao carregar dados de UFs: {e}")
         return pd.DataFrame()
@@ -16,7 +16,7 @@ def carregar_dados_ufs():
 @st.cache_data
 def carregar_dados_municipios():
     try:
-        return pd.read_parquet('dados/dados_dengue_municipios.parquet')
+        return pd.read_parquet('data/dados_dengue_municipios.parquet')
     except Exception as e:
         st.error(f"Erro ao carregar dados de municípios: {e}")
         return pd.DataFrame()
@@ -169,4 +169,5 @@ with col2:
 
 # Footer
 st.markdown("---")
+
 
