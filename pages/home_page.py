@@ -33,7 +33,7 @@ def carregar_estatisticas_gerais():
                 'ano_inicio': [2014],
                 'ano_fim': [2025],
                 'total_casos': [5000000],
-                'total_municipios': [0] # ADICIONADO: Valor padrão para consistência
+                'total_municipios': [5000] # ADICIONADO: Valor padrão para consistência
             })
         
         # Calcular estatísticas
@@ -54,7 +54,7 @@ def carregar_estatisticas_gerais():
             'ano_inicio': [2014],
             'ano_fim': [2025],
             'total_casos': [5000000],
-            'total_municipios': [0] # ADICIONADO: Valor padrão para consistência
+            'total_municipios': [5000] # ADICIONADO: Valor padrão para consistência
         })
 
 # Header principal
@@ -79,11 +79,13 @@ try:
         ano_inicio = 2014
         ano_fim = 2025
         total_casos = 5000000
+        total_municipios = 5000
 except:
     total_anos = 12
     ano_inicio = 2014
     ano_fim = 2025
     total_casos = 5000000
+    total_municipios = 5000
 
 # Métricas principais
 st.markdown("### Visão Geral dos Dados")
@@ -169,5 +171,6 @@ with col2:
 
 # Footer
 st.markdown("---")
+
 
 
